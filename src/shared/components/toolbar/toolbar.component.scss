@@ -1,0 +1,16 @@
+.app-toolbar {
+  display: block;
+  margin-top: 58px;
+
+  &__button {
+    background: #C4C4C4;
+    width: 100px;
+    height: 32px;
+    font-weight: 900;
+    font-size: 24px;
+
+    &._home {
+      margin-right: 8px;
+    }
+  }
+}

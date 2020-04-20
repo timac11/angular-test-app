@@ -1,0 +1,19 @@
+.app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__header {
+    height: 60px;
+  }
+
+  &__toolbar-container {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+}

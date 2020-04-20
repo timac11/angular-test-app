@@ -1,0 +1,18 @@
+.app-event-page {
+
+  &__container {
+    padding: 36px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+  }
+}

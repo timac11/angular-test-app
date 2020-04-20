@@ -1,0 +1,21 @@
+.app-events-container {
+  &__container {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  &__event-item {
+    margin: 16px;
+  }
+
+  &__add-button {
+    display: block;
+    width: 178px;
+    height: 212px;
+    margin: 16px;
+    background: #C4C4C4;
+    font-weight: 900;
+    font-size: 36px;
+  }
+}

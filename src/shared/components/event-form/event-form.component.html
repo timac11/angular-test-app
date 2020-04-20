@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <app-text-input labelText="Event Name"
+                  formControlName="name">
+  </app-text-input>
+  <div *ngIf="!form.get('name')?.valid">Invalid</div>
+  <app-text-input labelText="Address"
+                  formControlName="place">
+  </app-text-input>
+  <app-text-input labelText="Date"
+                  formControlName="date">
+  </app-text-input>
+  <button class="app-event-form__button">
+    Add
+  </button>
+</form>

@@ -1,0 +1,46 @@
+$event-width: 178px;
+
+.app-event {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: $event-width;
+    height: 212px;
+  }
+
+  &__image {
+    height: 100px;
+    width: $event-width;
+  }
+
+  &__footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 112px;
+    background: #DD005D;
+  }
+
+  &__event-name-container {
+    color: #FFFFFF;
+    flex-grow: 1;
+    font-weight: 900;
+    font-size: 36px;
+  }
+
+  &__event-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 18px;
+
+    &-place {
+      color: #FFFFFF;
+    }
+
+    &-date {
+      color: #000000;
+    }
+  }
+}
