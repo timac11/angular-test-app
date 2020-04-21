@@ -1,3 +1,12 @@
-<agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
-  <agm-marker  [latitude]="lat" [longitude]="lng"></agm-marker>
+<agm-map *ngIf="!(isLoading | async)"
+         [latitude]="currentLatitude"
+         [longitude]="currentLongitude"
+  [zoom]="zoom">
+  <agm-marker *ngFor="let event of (events$ | async)"
+              [latitude]="event.address.xCoordinate"
+              [openInfoWindow]="true"
+              [longitude]="event.address.yCoordinate">
+  </agm-marker>
 </agm-map>
+
+<app-loader *ngIf="isLoading | async"></app-loader>

@@ -20,7 +20,7 @@ export class HomePageComponent implements OnInit {
   public isLoading = this.store.pipe(select(getIsLoading));
 
   constructor(private store: Store<AppState>,
-              private router: Router) { }
+              private router: Router) {}
 
   ngOnInit(): void {
     this.store.dispatch(new LoadEventsIsLoadingAction(true));
