@@ -1,9 +1,6 @@
 .app-header {
   &__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    padding-left: 16px;
     height: 60px;
     display: flex;
     align-items: center;

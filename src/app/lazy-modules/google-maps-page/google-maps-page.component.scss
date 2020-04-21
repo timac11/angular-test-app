@@ -12,6 +12,11 @@
     align-items: center;
     width: 300px;
     background: white;
+
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+    }
   }
 
   &__main-container {

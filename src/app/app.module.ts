@@ -17,19 +17,19 @@ import {EventsEffects} from './store/effects/events.effects';
 import {StoreRouterConnectingModule} from '@ngrx/router-store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {CommonModule} from '@angular/common';
-import {HomePageModule} from './components/home-page/home-page.module';
+import {HomePageComponent} from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddEventPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HomePageModule,
     SharedModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 1000}),
     HttpClientModule,
