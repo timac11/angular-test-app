@@ -13,10 +13,12 @@ import {EventModel} from '../../model/event.model';
 import {of} from 'rxjs';
 import {AppState} from '../state/app.state';
 import {Store} from '@ngrx/store';
+import {Router} from '@angular/router';
 
 @Injectable()
 export class EventsEffects {
   constructor(private actions$: Actions,
+              private router: Router,
               private store$: Store<AppState>,
               private eventsService: EventsService) {
   }
@@ -25,7 +27,10 @@ export class EventsEffects {
   putEvent = this.actions$.pipe(
     ofType(EventsTypeActions.PutEvent),
     switchMap((action: EventsActions) => this.eventsService.putEvent((action.payload) as EventModel)),
-    switchMap((event: EventModel) => of(new PutEventSuccessAction(event)))
+    switchMap((event: EventModel) => {
+      this.router.navigate(['home']);
+      return of(new PutEventSuccessAction(event));
+    })
   );
 
   @Effect()
