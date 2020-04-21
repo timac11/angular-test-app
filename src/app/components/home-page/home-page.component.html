@@ -1,0 +1,11 @@
+<div class="app-home-page__container">
+  <app-events-container *ngIf="!(isLoading | async)"
+                        [events]="events$ | async"
+                        (addButtonClick)="navigateToCreateEvent()"
+  >
+  </app-events-container>
+  <div *ngIf="(isLoading | async)"
+       class="app-home-page__loader-container">
+    <app-loader></app-loader>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="app-toolbar__container">
+  <button *ngFor="let button of buttons"
+          class="app-toolbar__button"
+          (click)="onButtonClick(button)">
+    {{button.name}}
+  </button>
+</div>
