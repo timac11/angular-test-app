@@ -32,7 +32,7 @@ import {HomePageModule} from './components/home-page/home-page.module';
     ReactiveFormsModule,
     HomePageModule,
     SharedModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 2000}),
+    InMemoryWebApiModule.forRoot(InMemoryDataService, {delay: 1000}),
     HttpClientModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([EventsEffects]),

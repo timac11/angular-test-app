@@ -3,11 +3,13 @@
   margin-top: 58px;
 
   &__button {
-    background: #C4C4C4;
     width: 100px;
-    height: 32px;
+    height: 48px;
     font-weight: 900;
     font-size: 24px;
+    color: white;
+    border-radius: 3px;
+    background: #1976d2;
 
     &._home {
       margin-right: 8px;
