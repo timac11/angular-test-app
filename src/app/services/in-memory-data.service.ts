@@ -2,14 +2,16 @@ import {InMemoryDbService} from 'angular-in-memory-web-api';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
 
+const imageUrl = 'https://lh5.googleusercontent.com/p/AF1QipO7obThlZ63X5STkOOZA8Uw62U5LBY-lZndRG8i=s1016-k-no';
+
 @Injectable()
 export class InMemoryDataService implements InMemoryDbService {
   createDb(): {} | Observable<{}> | Promise<{}> {
     return {
       events: [
         {
-          img: 'https://sun9-52.userapi.com/c830408/v830408617/9a623/Z_zAKNcxUPY.jpg?ava=1',
-          name: 'name',
+          img: imageUrl,
+          name: 'Event 1',
           date: '13 june',
           address: {
             place: 'NY',
@@ -18,8 +20,8 @@ export class InMemoryDataService implements InMemoryDbService {
           }
         },
         {
-          img: 'https://sun9-52.userapi.com/c830408/v830408617/9a623/Z_zAKNcxUPY.jpg?ava=1',
-          name: 'name',
+          img: imageUrl,
+          name: 'Event 2',
           date: '14 june',
           address: {
             place: 'NY',
@@ -28,9 +30,9 @@ export class InMemoryDataService implements InMemoryDbService {
           }
         },
         {
-          img: 'https://sun9-52.userapi.com/c830408/v830408617/9a623/Z_zAKNcxUPY.jpg?ava=1',
+          img: imageUrl,
           name: 'name',
-          date: '13 june',
+          date: 'Event 3',
           address: {
             place: 'NY',
             xCoordinate: 24.3434,
