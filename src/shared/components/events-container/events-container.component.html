@@ -1,7 +1,6 @@
 <div class="app-events-container__container">
   <div *ngFor="let event of events" class="app-events-container__event-item">
-    <app-event [eventInfo]="event"
-               [image]="event.img">
+    <app-event [eventInfo]="event">
     </app-event>
   </div>
   <button class="app-events-container__add-button"
