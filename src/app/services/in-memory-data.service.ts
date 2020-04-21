@@ -10,6 +10,7 @@ export class InMemoryDataService implements InMemoryDbService {
     return {
       events: [
         {
+          id: 1,
           img: imageUrl,
           name: 'Event 1',
           date: '13 june',
@@ -20,6 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
           }
         },
         {
+          id: 2,
           img: imageUrl,
           name: 'Event 2',
           date: '14 june',
@@ -30,9 +32,10 @@ export class InMemoryDataService implements InMemoryDbService {
           }
         },
         {
+          id: 3,
           img: imageUrl,
-          name: 'name',
-          date: 'Event 3',
+          name: 'Event 3',
+          date: '17 June',
           address: {
             place: 'NY',
             xCoordinate: 24.3434,

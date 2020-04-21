@@ -1,6 +1,6 @@
 <label class="app-text-input__container">
   <div class="app-text-input__label">{{labelText}}</div>
-  <input type="text"
+  <input [type]="type"
          class="app-text-input__input"
          [value]="value"
          (input)="changeValue($event.target['value'])"

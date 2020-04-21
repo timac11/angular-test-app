@@ -3,12 +3,15 @@
     <div class="app-event-page__item-title">
       Add Event
     </div>
-    <app-event-form></app-event-form>
+    <app-event-form (valuesChange)="valueChanged($event)"
+                    (formSubmit)="createEvent()"
+    ></app-event-form>
   </div>
   <div class="app-event-page__container-item">
     <div class="app-event-page__item-title">
       Preview
     </div>
-    <app-event></app-event>
+    <app-event [eventInfo]="currentEvent"
+    ></app-event>
   </div>
 </div>

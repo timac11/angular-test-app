@@ -8,11 +8,11 @@ export class EventsService {
   constructor(private http: HttpClient) {}
 
   getEvents(): Observable<EventModel[]> {
-    console.log(this.http.get<EventModel[]>('/api/events'));
     return this.http.get<EventModel[]>('/api/events');
   }
 
   putEvent(event: EventModel): Observable<EventModel> {
-    return (this.http.post('/api/event', {event}) as Observable<EventModel>);
+    console.log(event);
+    return (this.http.post('/api/events', event) as Observable<EventModel>);
   }
 }

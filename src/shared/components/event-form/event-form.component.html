@@ -2,14 +2,19 @@
   <app-text-input labelText="Event Name"
                   formControlName="name">
   </app-text-input>
-  <div *ngIf="!form.get('name')?.valid">Invalid</div>
   <app-text-input labelText="Address"
                   formControlName="place">
   </app-text-input>
   <app-text-input labelText="Date"
-                  formControlName="date">
+                  formControlName="date"
+                  type="date">
   </app-text-input>
-  <button class="app-event-form__button">
+  <div *ngIf="!form.valid"
+      class="app-event-form__validation-message"
+  >All fields are required</div>
+  <button class="app-event-form__button"
+          [disabled]="!form.valid"
+          (click)="buttonClick()">
     Add
   </button>
 </form>

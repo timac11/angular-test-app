@@ -1,6 +1,6 @@
 export interface EventModel {
   name: string;
-  date: Date;
+  date: string;
   img: string;
   address: EventAddress;
 }

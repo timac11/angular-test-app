@@ -19,6 +19,9 @@ export class TextInputComponent implements OnChanges, ControlValueAccessor {
   @Input()
   public labelText = '';
 
+  @Input()
+  public type: 'text' |  'number' | 'date' = 'text';
+
   constructor() {
   }
 

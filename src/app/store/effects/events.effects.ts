@@ -1,7 +1,13 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect, ofType} from '@ngrx/effects';
 import {EventsService} from '../../services/events.service';
-import {EventsTypeActions, LoadEventsIsLoadingAction, LoadEventsSuccessAction} from '../actions/events.actions';
+import {
+  EventsActions,
+  EventsTypeActions,
+  LoadEventsIsLoadingAction,
+  LoadEventsSuccessAction,
+  PutEventSuccessAction
+} from '../actions/events.actions';
 import {switchMap} from 'rxjs/operators';
 import {EventModel} from '../../model/event.model';
 import {of} from 'rxjs';
@@ -14,6 +20,13 @@ export class EventsEffects {
               private store$: Store<AppState>,
               private eventsService: EventsService) {
   }
+
+  @Effect()
+  putEvent = this.actions$.pipe(
+    ofType(EventsTypeActions.PutEvent),
+    switchMap((action: EventsActions) => this.eventsService.putEvent((action.payload) as EventModel)),
+    switchMap((event: EventModel) => of(new PutEventSuccessAction(event)))
+  );
 
   @Effect()
   getEvents = this.actions$.pipe(

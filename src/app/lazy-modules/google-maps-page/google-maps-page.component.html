@@ -14,7 +14,8 @@
       <agm-marker *ngFor="let event of (events$ | async)"
                   [latitude]="event.address.xCoordinate"
                   [openInfoWindow]="true"
-                  [longitude]="event.address.yCoordinate">
+                  [longitude]="event.address.yCoordinate"
+                  (markerClick)="currentEvent = event">
       </agm-marker>
     </agm-map>
   </div>

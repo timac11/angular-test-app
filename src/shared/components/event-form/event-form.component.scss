@@ -1,5 +1,11 @@
 .app-event-form {
 
+  &__validation-message {
+    color: red;
+    padding-top: 8px;
+    font-weight: bold;
+  }
+
   &__button {
     height: 42px;
     width: 182px;
