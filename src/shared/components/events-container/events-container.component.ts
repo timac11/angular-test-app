@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {EventModel} from '../../../app/model/event.model';
 
 @Component({
@@ -13,10 +13,13 @@ export class EventsContainerComponent implements OnInit, OnChanges {
   @Input()
   public events: EventModel[] = [];
 
+  @Output()
+  public addButtonClick: EventEmitter<void> = new EventEmitter<void>();
+
   constructor() { }
 
-  public addEvent(event: Event): void {
-
+  public addEvent(): void {
+    this.addButtonClick.emit();
   }
 
   ngOnInit(): void {

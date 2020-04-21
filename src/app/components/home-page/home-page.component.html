@@ -1,5 +1,6 @@
 <div class="app-root__content" role="main">
   <app-events-container [events]="events$ | async"
+                        (addButtonClick)="navigateToCreateEvent()"
   >
   </app-events-container>
 </div>

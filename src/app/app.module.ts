@@ -17,6 +17,7 @@ import {EffectsModule} from '@ngrx/effects';
 import {EventsEffects} from './store/effects/events.effects';
 import {StoreRouterConnectingModule} from '@ngrx/router-store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
     SharedModule,
@@ -42,4 +44,4 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

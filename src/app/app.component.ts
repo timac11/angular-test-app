@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {ToolbarButton} from '../shared/components/toolbar/toolbar.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +11,21 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-test-app';
+  toolbarButtons: ToolbarButton[] = [
+    {
+      id: 'home',
+      name: 'Home'
+    },
+    {
+      id: 'map',
+      name: 'Map'
+    }
+  ];
+
+  constructor(private router: Router) {
+  }
+
+  public toolbarButtonClick(button): void {
+    this.router.navigate([button.id]);
+  }
 }

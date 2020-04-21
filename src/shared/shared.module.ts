@@ -8,6 +8,7 @@ import {ToolbarModule} from './components/toolbar/toolbar.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
+import {LoaderModule} from './components/loader/loader.module';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {CommonModule} from '@angular/common';
     EventsContainerModule,
     HeaderModule,
     TextInputModule,
-    ToolbarModule
+    ToolbarModule,
+    LoaderModule
   ],
   exports: [
     EventModule,
@@ -27,7 +29,8 @@ import {CommonModule} from '@angular/common';
     EventsContainerModule,
     HeaderModule,
     TextInputModule,
-    ToolbarModule
+    ToolbarModule,
+    LoaderModule
   ]
 })
 export class SharedModule {

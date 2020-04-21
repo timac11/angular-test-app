@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+
+export interface ToolbarButton {
+  id: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-toolbar',
@@ -7,11 +12,16 @@ import { Component, OnInit } from '@angular/core';
   // tslint:disable-next-line:no-host-metadata-property
   host: {class: 'app-toolbar'}
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
+  @Input()
+  public buttons: ToolbarButton[] = [];
+
+  @Output()
+  public buttonClick: EventEmitter<ToolbarButton> = new EventEmitter<ToolbarButton>();
 
   constructor() { }
 
-  ngOnInit(): void {
+  public onButtonClick(button: ToolbarButton) {
+    this.buttonClick.emit(button);
   }
-
 }

@@ -1,4 +1,7 @@
-<div>
-  <button class="app-toolbar__button _home">Home</button>
-  <button class="app-toolbar__button">Map</button>
+<div class="app-toolbar__container">
+  <button *ngFor="let button of buttons"
+          class="app-toolbar__button"
+          (click)="onButtonClick(button)">
+    {{button.name}}
+  </button>
 </div>

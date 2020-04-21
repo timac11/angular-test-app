@@ -2,7 +2,10 @@
   <app-header></app-header>
 </div>
 <div class="app-root__toolbar-container">
-  <app-toolbar></app-toolbar>
+  <app-toolbar [buttons]="toolbarButtons"
+               (buttonClick)="toolbarButtonClick($event)"
+  >
+  </app-toolbar>
 </div>
 
 <router-outlet></router-outlet>
