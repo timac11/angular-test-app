@@ -1,23 +1,28 @@
+$loader-color: #1976d2;
+
 .app-loader {
   &__container {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 
     &:after {
+      color: blanchedalmond;
       content: " ";
       display: block;
-      width: 64px;
-      height: 64px;
+      width: 86px;
+      height: 86px;
       margin: 8px;
       border-radius: 50%;
-      border: 6px solid #fff;
-      animation: lds-dual-ring 1.2s linear infinite;
+      border: 6px solid $loader-color;
+      -webkit-animation: dual-ring 1.2s linear infinite;
+      animation: dual-ring 1.2s linear infinite;
+      border-color: $loader-color transparent $loader-color transparent;
     }
   }
 }
 
-@keyframes app-loader__container {
+@keyframes dual-ring {
   0% {
     transform: rotate(0deg);
   }

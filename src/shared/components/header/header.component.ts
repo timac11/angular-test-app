@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   // tslint:disable-next-line:no-host-metadata-property
   host: {class: 'app-header'}
 })
-export class HeaderComponent {
-  constructor() { }
-}
+export class HeaderComponent {}

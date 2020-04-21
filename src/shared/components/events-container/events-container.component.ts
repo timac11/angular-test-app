@@ -16,8 +16,6 @@ export class EventsContainerComponent implements OnInit, OnChanges {
   @Output()
   public addButtonClick: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor() { }
-
   public addEvent(): void {
     this.addButtonClick.emit();
   }

@@ -1,11 +1,14 @@
-<div class="app-root__header">
-  <app-header></app-header>
+<div class="app-root__container">
+  <div class="app-root__header">
+    <app-header></app-header>
+  </div>
+  <div class="app-root__toolbar-container">
+    <app-toolbar [buttons]="toolbarButtons"
+                 (buttonClick)="toolbarButtonClick($event)"
+    >
+    </app-toolbar>
+  </div>
+  <div class="app-root__content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-<div class="app-root__toolbar-container">
-  <app-toolbar [buttons]="toolbarButtons"
-               (buttonClick)="toolbarButtonClick($event)"
-  >
-  </app-toolbar>
-</div>
-
-<router-outlet></router-outlet>
