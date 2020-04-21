@@ -19,15 +19,13 @@ export class GoogleMapsPageComponent implements OnInit, OnDestroy {
   public currentLongitude: number;
   public eventsSubscription: Subscription;
   public zoom = 4;
+  public currentEvent: EventModel;
 
   constructor(private store: Store<AppState>){}
 
   ngOnInit(): void {
     this.eventsSubscription = this.events$.subscribe((events: EventModel[]) => {
-      if (events && events[0]) {
-        this.currentLatitude = events[0].address.xCoordinate;
-        this.currentLongitude = events[0].address.yCoordinate;
-      }
+      this.currentEvent = events && events[0] || null;
     });
     this.store.dispatch(new LoadEventsIsLoadingAction(true));
     this.store.dispatch(new LoadEventsAction());

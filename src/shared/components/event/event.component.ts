@@ -14,21 +14,7 @@ export interface EventInfo {
   // tslint:disable-next-line:no-host-metadata-property
   host: {class: 'app-event'}
 })
-export class EventComponent implements OnInit, OnChanges {
-
-  @Input()
-  public image: string;
-
+export class EventComponent {
   @Input()
   public eventInfo: EventModel;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-
-  }
-
 }

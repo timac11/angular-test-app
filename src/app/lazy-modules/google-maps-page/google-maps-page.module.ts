@@ -4,6 +4,7 @@ import { GoogleMapsPageComponent } from './google-maps-page.component';
 import {AgmCoreModule} from '@agm/core';
 import {GoogleMapPageRoutingModule} from './google-map-page-routing.module';
 import {LoaderModule} from '../../../shared/components/loader/loader.module';
+import {EventModule} from '../../../shared/components/event/event.module';
 
 @NgModule({
   declarations: [GoogleMapsPageComponent],
@@ -13,7 +14,8 @@ import {LoaderModule} from '../../../shared/components/loader/loader.module';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDYA2UODkBmwcmeaHZ-wHduAhSqED9FwZM'
     }),
-    LoaderModule
+    LoaderModule,
+    EventModule
   ]
 })
 export class GoogleMapsPageModule { }
