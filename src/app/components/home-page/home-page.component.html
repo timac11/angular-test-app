@@ -1,3 +1,5 @@
 <div class="app-root__content" role="main">
-  <app-events-container></app-events-container>
+  <app-events-container [events]="events$ | async"
+  >
+  </app-events-container>
 </div>

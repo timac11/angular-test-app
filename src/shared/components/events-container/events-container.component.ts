@@ -1,10 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {EventInfo} from '../event/event.component';
-
-interface EventFullInfo {
-  eventInfo: EventInfo;
-  image: string;
-}
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {EventModel} from '../../../app/model/event.model';
 
 @Component({
   selector: 'app-events-container',
@@ -13,25 +8,21 @@ interface EventFullInfo {
   // tslint:disable-next-line:no-host-metadata-property
   host: {class: 'app-events-container'}
 })
-export class EventsContainerComponent implements OnInit {
+export class EventsContainerComponent implements OnInit, OnChanges {
 
   @Input()
-  public events: EventFullInfo[] = [];
+  public events: EventModel[] = [];
 
   constructor() { }
 
   public addEvent(event: Event): void {
-    this.events.push({
-      image: 'https://sun9-52.userapi.com/c830408/v830408617/9a623/Z_zAKNcxUPY.jpg?ava=1',
-      eventInfo: {
-        name: 'name',
-        place: 'NY',
-        date: '13 june'
-      }
-    });
+
   }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
   }
 
 }

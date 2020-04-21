@@ -7,10 +7,12 @@ import {TextInputModule} from './components/text-input/text-input.module';
 import {ToolbarModule} from './components/toolbar/toolbar.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
     BrowserModule,
+    CommonModule,
     ReactiveFormsModule,
     EventModule,
     EventFormModule,
