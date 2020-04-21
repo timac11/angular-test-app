@@ -1,3 +1,21 @@
-agm-map {
-  height: 100%;
+.app-google-maps-page {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__agm-map {
+    height: 100%;
+    flex-grow: 1;
+  }
+
+  &__loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
 }

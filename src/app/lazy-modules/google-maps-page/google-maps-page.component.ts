@@ -24,7 +24,7 @@ export class GoogleMapsPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.eventsSubscription = this.events$.subscribe((events: EventModel[]) => {
-      if (events[0]) {
+      if (events && events[0]) {
         this.currentLatitude = events[0].address.xCoordinate;
         this.currentLongitude = events[0].address.yCoordinate;
       }

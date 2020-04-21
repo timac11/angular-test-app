@@ -1,12 +1,17 @@
-<agm-map *ngIf="!(isLoading | async)"
-         [latitude]="currentLatitude"
-         [longitude]="currentLongitude"
-  [zoom]="zoom">
-  <agm-marker *ngFor="let event of (events$ | async)"
-              [latitude]="event.address.xCoordinate"
-              [openInfoWindow]="true"
-              [longitude]="event.address.yCoordinate">
-  </agm-marker>
-</agm-map>
+<div class="app-google-maps-page__container">
+  <agm-map *ngIf="!(isLoading | async)"
+           class="app-google-maps-page__agm-map"
+           [latitude]="currentLatitude"
+           [longitude]="currentLongitude"
+           [zoom]="zoom">
+    <agm-marker *ngFor="let event of (events$ | async)"
+                [latitude]="event.address.xCoordinate"
+                [openInfoWindow]="true"
+                [longitude]="event.address.yCoordinate">
+    </agm-marker>
+  </agm-map>
 
-<app-loader *ngIf="isLoading | async"></app-loader>
+  <div class="app-google-maps-page__loader-container">
+    <app-loader *ngIf="isLoading | async"></app-loader>
+  </div>
+</div>
